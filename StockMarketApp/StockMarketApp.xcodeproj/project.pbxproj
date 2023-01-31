@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		967FFECE29831F29002B3110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FFECD29831F29002B3110 /* AppDelegate.swift */; };
 		967FFED029831F29002B3110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FFECF29831F29002B3110 /* SceneDelegate.swift */; };
-		967FFED229831F29002B3110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FFED129831F29002B3110 /* ViewController.swift */; };
-		967FFED529831F29002B3110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967FFED329831F29002B3110 /* Main.storyboard */; };
 		967FFED729831F2B002B3110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967FFED629831F2B002B3110 /* Assets.xcassets */; };
 		967FFEDA29831F2B002B3110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967FFED829831F2B002B3110 /* LaunchScreen.storyboard */; };
+		96B1786A2987AD250092F3DD /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B178682987AD250092F3DD /* MainTableViewCell.swift */; };
+		96B1786B2987AD250092F3DD /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B178692987AD250092F3DD /* MainTableViewCell.xib */; };
+		96B178752987AE2B0092F3DD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 96B178742987AE2B0092F3DD /* Alamofire */; };
+		96B178782987AE3B0092F3DD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 96B178772987AE3B0092F3DD /* Kingfisher */; };
+		96B1787A2987AE520092F3DD /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B178792987AE520092F3DD /* ServiceManager.swift */; };
+		96B1787C2987AEAB0092F3DD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1787B2987AEAB0092F3DD /* Service.swift */; };
+		96B1787E2987AEF00092F3DD /* CurrencyApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1787D2987AEF00092F3DD /* CurrencyApi.swift */; };
+		96B178812987B0E70092F3DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1787F2987B0E70092F3DD /* MainViewController.swift */; };
+		96B178822987B0E70092F3DD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B178802987B0E70092F3DD /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		967FFECA29831F29002B3110 /* StockMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967FFECD29831F29002B3110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		967FFECF29831F29002B3110 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		967FFED129831F29002B3110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		967FFED429831F29002B3110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		967FFED629831F2B002B3110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		967FFED929831F2B002B3110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		967FFEDB29831F2B002B3110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B178682987AD250092F3DD /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		96B178692987AD250092F3DD /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		96B178792987AE520092F3DD /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		96B1787B2987AEAB0092F3DD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		96B1787D2987AEF00092F3DD /* CurrencyApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyApi.swift; sourceTree = "<group>"; };
+		96B1787F2987B0E70092F3DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		96B178802987B0E70092F3DD /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B178782987AE3B0092F3DD /* Kingfisher in Frameworks */,
+				96B178752987AE2B0092F3DD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,84 @@
 		967FFECC29831F29002B3110 /* StockMarketApp */ = {
 			isa = PBXGroup;
 			children = (
+				96B1786C2987AD370092F3DD /* Supporting Files */,
+				96B1786D2987AD630092F3DD /* Network */,
+				96B178712987AD910092F3DD /* Api Source */,
+				96B178652987ACDA0092F3DD /* Controllers */,
+				96B178672987AD0C0092F3DD /* Cells */,
+				96B178722987ADC50092F3DD /* ViewModel */,
+			);
+			path = StockMarketApp;
+			sourceTree = "<group>";
+		};
+		96B178652987ACDA0092F3DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96B1787F2987B0E70092F3DD /* MainViewController.swift */,
+				96B178802987B0E70092F3DD /* MainViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96B178672987AD0C0092F3DD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96B178682987AD250092F3DD /* MainTableViewCell.swift */,
+				96B178692987AD250092F3DD /* MainTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		96B1786C2987AD370092F3DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				967FFECD29831F29002B3110 /* AppDelegate.swift */,
 				967FFECF29831F29002B3110 /* SceneDelegate.swift */,
-				967FFED129831F29002B3110 /* ViewController.swift */,
-				967FFED329831F29002B3110 /* Main.storyboard */,
 				967FFED629831F2B002B3110 /* Assets.xcassets */,
 				967FFED829831F2B002B3110 /* LaunchScreen.storyboard */,
 				967FFEDB29831F2B002B3110 /* Info.plist */,
 			);
-			path = StockMarketApp;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96B1786D2987AD630092F3DD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				96B1786E2987AD6A0092F3DD /* Manager */,
+				96B178702987AD800092F3DD /* Service */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		96B1786E2987AD6A0092F3DD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				96B178792987AE520092F3DD /* ServiceManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		96B178702987AD800092F3DD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				96B1787B2987AEAB0092F3DD /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		96B178712987AD910092F3DD /* Api Source */ = {
+			isa = PBXGroup;
+			children = (
+				96B1787D2987AEF00092F3DD /* CurrencyApi.swift */,
+			);
+			path = "Api Source";
+			sourceTree = "<group>";
+		};
+		96B178722987ADC50092F3DD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +166,10 @@
 			dependencies = (
 			);
 			name = StockMarketApp;
+			packageProductDependencies = (
+				96B178742987AE2B0092F3DD /* Alamofire */,
+				96B178772987AE3B0092F3DD /* Kingfisher */,
+			);
 			productName = StockMarketApp;
 			productReference = 967FFECA29831F29002B3110 /* StockMarketApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +198,10 @@
 				Base,
 			);
 			mainGroup = 967FFEC129831F29002B3110;
+			packageReferences = (
+				96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 967FFECB29831F29002B3110 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				967FFEDA29831F2B002B3110 /* LaunchScreen.storyboard in Resources */,
+				96B1786B2987AD250092F3DD /* MainTableViewCell.xib in Resources */,
 				967FFED729831F2B002B3110 /* Assets.xcassets in Resources */,
-				967FFED529831F29002B3110 /* Main.storyboard in Resources */,
+				96B178822987B0E70092F3DD /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +230,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				967FFED229831F29002B3110 /* ViewController.swift in Sources */,
+				96B178812987B0E70092F3DD /* MainViewController.swift in Sources */,
 				967FFECE29831F29002B3110 /* AppDelegate.swift in Sources */,
+				96B1787E2987AEF00092F3DD /* CurrencyApi.swift in Sources */,
+				96B1787A2987AE520092F3DD /* ServiceManager.swift in Sources */,
+				96B1786A2987AD250092F3DD /* MainTableViewCell.swift in Sources */,
 				967FFED029831F29002B3110 /* SceneDelegate.swift in Sources */,
+				96B1787C2987AEAB0092F3DD /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		967FFED329831F29002B3110 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				967FFED429831F29002B3110 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		967FFED829831F2B002B3110 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +380,6 @@
 				INFOPLIST_FILE = StockMarketApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +407,6 @@
 				INFOPLIST_FILE = StockMarketApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +444,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		96B178742987AE2B0092F3DD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		96B178772987AE3B0092F3DD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 967FFEC229831F29002B3110 /* Project object */;
 }
