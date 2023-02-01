@@ -5,11 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="StockMarketApp" customModuleProvider="target">
             <connections>
+                <outlet property="mainTableView" destination="uCE-9Q-7uq" id="sxl-85-HTf"/>
+                <outlet property="sortButton" destination="t3g-bo-gZh" id="l4Q-rT-CjR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +20,52 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-bo-gZh">
+                    <rect key="frame" x="303" y="69" width="74" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ZJf-oa-vvt"/>
+                    </constraints>
+                    <menu key="menu" id="4pj-e7-vMG"/>
+                    <state key="normal" title="Button" image="chevron.down" catalog="system"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Button" cornerStyle="capsule">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                        <color key="baseBackgroundColor" red="0.80834236136839854" green="0.81450482186429729" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw7-m8-n1X">
+                    <rect key="frame" x="16" y="73" width="144" height="26.333333333333329"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="144" id="yua-mK-j6r"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uCE-9Q-7uq">
+                    <rect key="frame" x="-4" y="123" width="401" height="691"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="48" y="21"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
+            <constraints>
+                <constraint firstItem="uCE-9Q-7uq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-4" id="502-7y-6pA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uCE-9Q-7uq" secondAttribute="bottom" constant="4" id="MPG-NK-lP3"/>
+                <constraint firstItem="kw7-m8-n1X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="c4K-ey-dHp"/>
+                <constraint firstItem="kw7-m8-n1X" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="mgG-oP-CtK"/>
+                <constraint firstItem="t3g-bo-gZh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="n3R-F0-cGg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="t3g-bo-gZh" secondAttribute="trailing" constant="16" id="q5x-6d-woh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uCE-9Q-7uq" secondAttribute="trailing" constant="-4" id="udI-W4-r0L"/>
+                <constraint firstItem="uCE-9Q-7uq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="xep-3O-18l"/>
+            </constraints>
+            <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

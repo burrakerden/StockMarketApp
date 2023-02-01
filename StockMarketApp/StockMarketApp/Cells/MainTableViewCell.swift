@@ -9,6 +9,13 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var coinImage: UIImageView!
+    @IBOutlet weak var coinName: UILabel!
+    @IBOutlet weak var coinShortName: UILabel!
+    @IBOutlet weak var coinPrice: UILabel!
+    @IBOutlet weak var coinChange: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
