@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-bo-gZh">
-                    <rect key="frame" x="303" y="69" width="74" height="40"/>
+                    <rect key="frame" x="303" y="49" width="74" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="ZJf-oa-vvt"/>
                     </constraints>
@@ -34,7 +34,7 @@
                     </buttonConfiguration>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ranking List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kw7-m8-n1X">
-                    <rect key="frame" x="16" y="73" width="144" height="26.333333333333329"/>
+                    <rect key="frame" x="16" y="55.000000000000007" width="144" height="26.333333333333336"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="144" id="yua-mK-j6r"/>
                     </constraints>
@@ -43,7 +43,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uCE-9Q-7uq">
-                    <rect key="frame" x="-4" y="123" width="401" height="691"/>
+                    <rect key="frame" x="-4" y="113" width="401" height="701"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                 </tableView>
             </subviews>
@@ -53,11 +53,11 @@
                 <constraint firstItem="uCE-9Q-7uq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="-4" id="502-7y-6pA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uCE-9Q-7uq" secondAttribute="bottom" constant="4" id="MPG-NK-lP3"/>
                 <constraint firstItem="kw7-m8-n1X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="c4K-ey-dHp"/>
-                <constraint firstItem="kw7-m8-n1X" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="14" id="mgG-oP-CtK"/>
-                <constraint firstItem="t3g-bo-gZh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="n3R-F0-cGg"/>
+                <constraint firstItem="kw7-m8-n1X" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-4" id="mgG-oP-CtK"/>
+                <constraint firstItem="t3g-bo-gZh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-10" id="n3R-F0-cGg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="t3g-bo-gZh" secondAttribute="trailing" constant="16" id="q5x-6d-woh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uCE-9Q-7uq" secondAttribute="trailing" constant="-4" id="udI-W4-r0L"/>
-                <constraint firstItem="uCE-9Q-7uq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="64" id="xep-3O-18l"/>
+                <constraint firstItem="uCE-9Q-7uq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="54" id="xep-3O-18l"/>
             </constraints>
             <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
         </view>

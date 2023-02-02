@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961FA478298B041D005D8BAB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961FA476298B041D005D8BAB /* DetailViewController.swift */; };
+		961FA479298B041D005D8BAB /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 961FA477298B041D005D8BAB /* DetailViewController.xib */; };
+		963B5A53298BA41400ED2EA2 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 963B5A52298BA41400ED2EA2 /* Charts */; };
+		963B5A56298BE01F00ED2EA2 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 963B5A55298BE01F00ED2EA2 /* SVGKitSwift */; };
+		9656C098298C5F9100D2EA6E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9656C097298C5F9100D2EA6E /* SDWebImage */; };
+		9656C09B298C60C300D2EA6E /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 9656C09A298C60C300D2EA6E /* SDWebImageSVGCoder */; };
 		967FFECE29831F29002B3110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FFECD29831F29002B3110 /* AppDelegate.swift */; };
 		967FFED029831F29002B3110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FFECF29831F29002B3110 /* SceneDelegate.swift */; };
 		967FFED729831F2B002B3110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967FFED629831F2B002B3110 /* Assets.xcassets */; };
@@ -21,9 +27,15 @@
 		96B178812987B0E70092F3DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1787F2987B0E70092F3DD /* MainViewController.swift */; };
 		96B178822987B0E70092F3DD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B178802987B0E70092F3DD /* MainViewController.xib */; };
 		96EAD6D929894699004B7BC9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EAD6D829894699004B7BC9 /* ViewModel.swift */; };
+		FFE5BB1CFB83F6428D03D0A4 /* Pods_StockMarketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACD97F0219C4B9568CFE6C9 /* Pods_StockMarketApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5ACD97F0219C4B9568CFE6C9 /* Pods_StockMarketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockMarketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B091A16DC061198E56B9CF /* Pods-StockMarketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockMarketApp.release.xcconfig"; path = "Target Support Files/Pods-StockMarketApp/Pods-StockMarketApp.release.xcconfig"; sourceTree = "<group>"; };
+		94468E7BF7C3FF5E46A2E3F1 /* Pods-StockMarketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockMarketApp.debug.xcconfig"; path = "Target Support Files/Pods-StockMarketApp/Pods-StockMarketApp.debug.xcconfig"; sourceTree = "<group>"; };
+		961FA476298B041D005D8BAB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		961FA477298B041D005D8BAB /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		967FFECA29831F29002B3110 /* StockMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967FFECD29831F29002B3110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		967FFECF29831F29002B3110 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,19 +57,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963B5A56298BE01F00ED2EA2 /* SVGKitSwift in Frameworks */,
 				96B178782987AE3B0092F3DD /* Kingfisher in Frameworks */,
+				963B5A53298BA41400ED2EA2 /* Charts in Frameworks */,
+				9656C09B298C60C300D2EA6E /* SDWebImageSVGCoder in Frameworks */,
 				96B178752987AE2B0092F3DD /* Alamofire in Frameworks */,
+				9656C098298C5F9100D2EA6E /* SDWebImage in Frameworks */,
+				FFE5BB1CFB83F6428D03D0A4 /* Pods_StockMarketApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37A9A79DE11ED8FBAD187E65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ACD97F0219C4B9568CFE6C9 /* Pods_StockMarketApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		967FFEC129831F29002B3110 = {
 			isa = PBXGroup;
 			children = (
 				967FFECC29831F29002B3110 /* StockMarketApp */,
 				967FFECB29831F29002B3110 /* Products */,
+				985D7B7B85774E4531DA44C0 /* Pods */,
+				37A9A79DE11ED8FBAD187E65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +114,8 @@
 			children = (
 				96B1787F2987B0E70092F3DD /* MainViewController.swift */,
 				96B178802987B0E70092F3DD /* MainViewController.xib */,
+				961FA476298B041D005D8BAB /* DetailViewController.swift */,
+				961FA477298B041D005D8BAB /* DetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +182,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		985D7B7B85774E4531DA44C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94468E7BF7C3FF5E46A2E3F1 /* Pods-StockMarketApp.debug.xcconfig */,
+				83B091A16DC061198E56B9CF /* Pods-StockMarketApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 967FFEDE29831F2B002B3110 /* Build configuration list for PBXNativeTarget "StockMarketApp" */;
 			buildPhases = (
+				0FA8144EFF5D2223AE23BA49 /* [CP] Check Pods Manifest.lock */,
 				967FFEC629831F29002B3110 /* Sources */,
 				967FFEC729831F29002B3110 /* Frameworks */,
 				967FFEC829831F29002B3110 /* Resources */,
+				3CE7FF1863812301F1AF38D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +213,10 @@
 			packageProductDependencies = (
 				96B178742987AE2B0092F3DD /* Alamofire */,
 				96B178772987AE3B0092F3DD /* Kingfisher */,
+				963B5A52298BA41400ED2EA2 /* Charts */,
+				963B5A55298BE01F00ED2EA2 /* SVGKitSwift */,
+				9656C097298C5F9100D2EA6E /* SDWebImage */,
+				9656C09A298C60C300D2EA6E /* SDWebImageSVGCoder */,
 			);
 			productName = StockMarketApp;
 			productReference = 967FFECA29831F29002B3110 /* StockMarketApp.app */;
@@ -202,8 +247,12 @@
 			);
 			mainGroup = 967FFEC129831F29002B3110;
 			packageReferences = (
-				96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire" */,
-				96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				963B5A51298BA41400ED2EA2 /* XCRemoteSwiftPackageReference "Charts.git" */,
+				963B5A54298BE01F00ED2EA2 /* XCRemoteSwiftPackageReference "SVGKit.git" */,
+				9656C096298C5F9000D2EA6E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				9656C099298C60C200D2EA6E /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */,
 			);
 			productRefGroup = 967FFECB29831F29002B3110 /* Products */;
 			projectDirPath = "";
@@ -221,6 +270,7 @@
 			files = (
 				967FFEDA29831F2B002B3110 /* LaunchScreen.storyboard in Resources */,
 				96B1786B2987AD250092F3DD /* MainTableViewCell.xib in Resources */,
+				961FA479298B041D005D8BAB /* DetailViewController.xib in Resources */,
 				967FFED729831F2B002B3110 /* Assets.xcassets in Resources */,
 				96B178822987B0E70092F3DD /* MainViewController.xib in Resources */,
 			);
@@ -228,11 +278,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FA8144EFF5D2223AE23BA49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockMarketApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CE7FF1863812301F1AF38D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockMarketApp/Pods-StockMarketApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockMarketApp/Pods-StockMarketApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockMarketApp/Pods-StockMarketApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		967FFEC629831F29002B3110 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961FA478298B041D005D8BAB /* DetailViewController.swift in Sources */,
 				96B178812987B0E70092F3DD /* MainViewController.swift in Sources */,
 				967FFECE29831F29002B3110 /* AppDelegate.swift in Sources */,
 				96B1787E2987AEF00092F3DD /* CurrencyApi.swift in Sources */,
@@ -374,6 +467,7 @@
 		};
 		967FFEDF29831F2B002B3110 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94468E7BF7C3FF5E46A2E3F1 /* Pods-StockMarketApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -401,6 +495,7 @@
 		};
 		967FFEE029831F2B002B3110 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83B091A16DC061198E56B9CF /* Pods-StockMarketApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -450,7 +545,39 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		963B5A51298BA41400ED2EA2 /* XCRemoteSwiftPackageReference "Charts.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		963B5A54298BE01F00ED2EA2 /* XCRemoteSwiftPackageReference "SVGKit.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		9656C096298C5F9000D2EA6E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		9656C099298C60C200D2EA6E /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.0;
+			};
+		};
+		96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -458,7 +585,7 @@
 				kind = branch;
 			};
 		};
-		96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -469,14 +596,34 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		963B5A52298BA41400ED2EA2 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 963B5A51298BA41400ED2EA2 /* XCRemoteSwiftPackageReference "Charts.git" */;
+			productName = Charts;
+		};
+		963B5A55298BE01F00ED2EA2 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 963B5A54298BE01F00ED2EA2 /* XCRemoteSwiftPackageReference "SVGKit.git" */;
+			productName = SVGKitSwift;
+		};
+		9656C097298C5F9100D2EA6E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9656C096298C5F9000D2EA6E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		9656C09A298C60C300D2EA6E /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9656C099298C60C200D2EA6E /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder.git" */;
+			productName = SDWebImageSVGCoder;
+		};
 		96B178742987AE2B0092F3DD /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 96B178732987AE2B0092F3DD /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 		96B178772987AE3B0092F3DD /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 96B178762987AE3B0092F3DD /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */

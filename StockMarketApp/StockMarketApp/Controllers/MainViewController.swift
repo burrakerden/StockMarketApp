@@ -7,6 +7,9 @@
 
 import UIKit
 import Kingfisher
+import SDWebImage
+import SDWebImageSVGCoder
+
 
 class MainViewController: UIViewController {
     
@@ -17,14 +20,17 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mainTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setButton()
-        setupUI()
-        getDetailData()
+        config()
     }
     
+    func config() {
+        getDetailData()
+        setupUI()
+        setButton()
+    }
     
     func getDetailData() {
-        viewModel.getCurrencyData(mainTableView: mainTableView, navigationController: navigationController!)
+        viewModel.getCurrencyData(mainTableView: mainTableView, navigationController: navigationController!, navigationItem: navigationItem)
     }
     
     func setupUI() {
@@ -53,46 +59,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: MainTableViewCell = mainTableView.dequeueReusableCell(withIdentifier: "MainTableViewCell", for: indexPath) as? MainTableViewCell else {return UITableViewCell()}
         guard let currencyData = viewModel.currencyData?[indexPath.section] else {return UITableViewCell()}
-        
-        currencyFormatter.usesGroupingSeparator = true
-        currencyFormatter.numberStyle = .currency
-        currencyFormatter.locale = Locale(identifier: "en_US")
-        let price = Double(currencyData.price ?? "1.11")
-        switch price! {
-        case 10.0...:
-            currencyFormatter.maximumFractionDigits = 2
-            currencyFormatter.minimumFractionDigits = 2
-        case 1.0...10.0:
-            currencyFormatter.maximumFractionDigits = 3
-            currencyFormatter.minimumFractionDigits = 3
-        case 0.01...1.0:
-            currencyFormatter.maximumFractionDigits = 4
-        case 0.00001...0.01:
-            currencyFormatter.maximumFractionDigits = 5
-        default:
-            print("\(currencyData.name ?? "error")")
-        }
-        
-        cell.coinName.text = currencyData.name
-        if Double(currencyData.change!)! < 0 {
-            cell.coinChange.textColor = .systemRed
-            cell.coinChange.text = (currencyData.change ?? "0") + "%"
-        } else {
-            cell.coinChange.textColor = .systemGreen
-            cell.coinChange.text = "+" + (currencyData.change ?? "0") + "%"
-        }
-        
-        cell.coinShortName.text = currencyData.symbol
-        cell.coinPrice.text = currencyFormatter.string(from: NSNumber(value: price!))
-        cell.coinImage.kf.setImage(with: URL(string: currencyData.iconURL ?? ""))
+        cell.prepareCell(model: currencyData)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let currencyData = viewModel.currencyData?[indexPath.section] else {return}
+        let vc = DetailViewController()
+        vc.currencyData = currencyData
+        navigationController?.pushViewController(vc, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        90
+    }
 
-    
-    
 }

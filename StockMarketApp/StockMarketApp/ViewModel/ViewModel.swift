@@ -13,14 +13,15 @@ import UIKit
 class ViewModel {
         
     var currencyData: [Coin]?
+    let currencyFormatter = NumberFormatter()
     
     //MARK: - Fetch data
     
-    func getCurrencyData(mainTableView: UITableView, navigationController: UINavigationController) {
+    func getCurrencyData(mainTableView: UITableView, navigationController: UINavigationController, navigationItem: UINavigationItem) {
         Service().getCurrencyData() { result in
             guard let result1 = result?.data?.coins else {return}
             self.currencyData = result1
-            self.setupUI(mainTableView: mainTableView, navigationController: navigationController)
+            self.setupUI(mainTableView: mainTableView, navigationController: navigationController, navigationItem: navigationItem)
         } onError: { error in
             print(error)
         }
@@ -28,21 +29,22 @@ class ViewModel {
     
     //MARK: - Config
 
-    func setupUI(mainTableView: UITableView, navigationController: UINavigationController) {
+    func setupUI(mainTableView: UITableView, navigationController: UINavigationController, navigationItem: UINavigationItem) {
         mainTableView.register(UINib(nibName: "MainTableViewCell", bundle: nil), forCellReuseIdentifier: "MainTableViewCell")
         mainTableView.sectionHeaderHeight = 0
-        navigationController.isNavigationBarHidden = true
         mainTableView.reloadData()
+        navigationItem.backButtonTitle = " "
+        navigationController.navigationBar.tintColor = .black
     }
     
     //MARK: - Sorting
     
     func setSortButton(mainTableView: UITableView, sortButton: UIButton) {
-        let sortByPrice = {(action: UIAction) in
-            self.sortByPrice(mainTableView: mainTableView)}
-        
         let sortByMarketCap = {(action: UIAction) in
             self.sortByMarketCap(mainTableView: mainTableView)}
+        
+        let sortByPrice = {(action: UIAction) in
+            self.sortByPrice(mainTableView: mainTableView)}
         
         let sortBy24hVolume = {(action: UIAction) in
             self.sortBy24hVolume(mainTableView: mainTableView)}
@@ -54,8 +56,8 @@ class ViewModel {
             self.sortByListedAt(mainTableView: mainTableView)}
         
         sortButton.menu = UIMenu(children : [
-            UIAction(title: "Price", state: .on, handler: sortByPrice),
-            UIAction(title: "Market Cap", handler: sortByMarketCap),
+            UIAction(title: "Market Cap", state: .on, handler: sortByMarketCap),
+            UIAction(title: "Price", handler: sortByPrice),
             UIAction(title: "24h Vol", handler: sortBy24hVolume),
             UIAction(title: "Change", handler: sortByChange),
             UIAction(title: "Listed At", handler: sortByListedAt)])
@@ -90,5 +92,30 @@ class ViewModel {
         mainTableView.reloadData()
     }
     
+    
+    //MARK: - Currency Formatter
+    
+    func priceFormatter(price: Double, max10To1000: Int, min10To1000: Int, max1To10: Int, min1To10: Int, max001To1: Int, max000001To001: Int) -> String {
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.locale = Locale(identifier: "en_US")
+        switch price {
+        case 10.0...:
+            currencyFormatter.maximumFractionDigits = max10To1000
+            currencyFormatter.minimumFractionDigits = min10To1000
+        case 1.0...10.0:
+            currencyFormatter.maximumFractionDigits = max1To10
+            currencyFormatter.minimumFractionDigits = min1To10
+        case 0.01...1.0:
+            currencyFormatter.maximumFractionDigits = max001To1
+        case 0.00001...0.01:
+            currencyFormatter.maximumFractionDigits = max000001To001
+        default:
+            print("error")
+        }
+        
+        return currencyFormatter.string(from: NSNumber(value: price)) ?? "00000"
+
+    }
 }
 
