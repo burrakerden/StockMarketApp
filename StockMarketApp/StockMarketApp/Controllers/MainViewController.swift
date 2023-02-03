@@ -41,7 +41,6 @@ class MainViewController: UIViewController {
     func setButton() {
         viewModel.setSortButton(mainTableView: mainTableView, sortButton: sortButton)
     }
-
 }
 
 //MARK: - Table View

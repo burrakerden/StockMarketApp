@@ -33,14 +33,6 @@ class MainTableViewCell: UITableViewCell {
     func prepareCell(model: Coin) {
         guard let price = Double(model.price ?? "1.11") else {return}
         coinName.text = model.name
-        if Double(model.change!)! < 0 {
-            coinChange.textColor = .systemRed
-            coinChange.text = (model.change ?? "0") + "%"
-        } else {
-            coinChange.textColor = .systemGreen
-            coinChange.text = "+" + (model.change ?? "0") + "%"
-        }
-        
         coinShortName.text = model.symbol
         coinPrice.text = viewModel.priceFormatter(price: price,
                                                        max10To1000: 2,
@@ -49,7 +41,8 @@ class MainTableViewCell: UITableViewCell {
                                                        min1To10: 3,
                                                        max001To1: 4,
                                                        max000001To001: 5)
-        
+        viewModel.changeColor(model: model, change: coinChange)
+
         SDImageCodersManager.shared.addCoder(SDImageSVGCoder.shared)
         if let url = model.iconURL {
             coinImage.sd_setImage(with: URL(string: url))

@@ -18,7 +18,6 @@
                 <outlet property="price" destination="sI0-0D-rPv" id="deb-6J-Yyw"/>
                 <outlet property="rank" destination="1G3-t6-UBz" id="pnu-9F-Gfp"/>
                 <outlet property="shortName" destination="Dmo-na-5LM" id="gIa-lI-mnu"/>
-                <outlet property="svgImageView" destination="zwJ-Mt-jV1" id="ctS-Bu-TYO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -90,17 +89,12 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zwJ-Mt-jV1">
-                    <rect key="frame" x="85" y="690" width="240" height="128"/>
-                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="qd9-s6-WRc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4NY-RF-DRO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0gb-BI-dWq" secondAttribute="bottom" constant="140" id="4W5-B0-jJq"/>
-                <constraint firstItem="zwJ-Mt-jV1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="85" id="4em-cd-tyz"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zwJ-Mt-jV1" secondAttribute="trailing" constant="68" id="5Io-F6-idR"/>
                 <constraint firstItem="sI0-0D-rPv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="B9e-iV-ZyV"/>
                 <constraint firstItem="0gb-BI-dWq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="320" id="BUD-yg-hVI"/>
                 <constraint firstItem="qd9-s6-WRc" firstAttribute="top" secondItem="Dmo-na-5LM" secondAttribute="bottom" id="Bd9-qu-U4S"/>
@@ -115,8 +109,6 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pK8-nL-fvr" secondAttribute="trailing" constant="16" id="V3p-p4-5qp"/>
                 <constraint firstItem="tpi-eg-t25" firstAttribute="top" secondItem="rUa-AX-cYu" secondAttribute="bottom" constant="6" id="WTn-wp-uvO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pK8-nL-fvr" secondAttribute="trailing" constant="16" id="WrJ-ov-xCY"/>
-                <constraint firstItem="zwJ-Mt-jV1" firstAttribute="top" secondItem="0gb-BI-dWq" secondAttribute="bottom" constant="12" id="Ybz-WS-4w3"/>
-                <constraint firstItem="zwJ-Mt-jV1" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="a28-UX-hcE"/>
                 <constraint firstItem="Dmo-na-5LM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d35-Kw-QtZ"/>
                 <constraint firstItem="znj-QH-h6j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="djb-Un-WZg"/>
                 <constraint firstItem="Dmo-na-5LM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="gWY-Wb-HsE"/>

@@ -64,7 +64,6 @@ class ViewModel {
         
         sortButton.showsMenuAsPrimaryAction = true
         sortButton.changesSelectionAsPrimaryAction = true
-//        mainTableView.reloadData()
     }
 
     func sortByPrice(mainTableView: UITableView) {
@@ -92,7 +91,6 @@ class ViewModel {
         mainTableView.reloadData()
     }
     
-    
     //MARK: - Currency Formatter
     
     func priceFormatter(price: Double, max10To1000: Int, min10To1000: Int, max1To10: Int, min1To10: Int, max001To1: Int, max000001To001: Int) -> String {
@@ -113,9 +111,17 @@ class ViewModel {
         default:
             print("error")
         }
-        
         return currencyFormatter.string(from: NSNumber(value: price)) ?? "00000"
-
+    }
+    
+    func changeColor(model: Coin, change: UILabel) {
+        if Double(model.change!)! < 0 {
+            change.textColor = .systemRed
+            change.text = (model.change ?? "0") + "%"
+        } else {
+            change.textColor = .systemGreen
+            change.text = "+" + (model.change ?? "0") + "%"
+        }
     }
 }
 

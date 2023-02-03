@@ -22,61 +22,29 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lowPrice: UILabel!
     @IBOutlet weak var rank: UILabel!
     
-    @IBOutlet weak var svgImageView: UIImageView!
     var currencyData: Coin?
-    let currencyFormatter = NumberFormatter()
         
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        lineChart.delegate = self
-        
     }
-    
 
-    
     func setupUI() {
-        shortName.text = currencyData?.symbol
-        name.text = currencyData?.name
-        rank.text = "Rank: \(currencyData?.rank ?? 0)"
+        lineChart.delegate = self
+        guard let currencyData = currencyData else {return}
+        shortName.text = currencyData.symbol
+        name.text = currencyData.name
+        rank.text = "Rank: \(currencyData.rank ?? 0)"
         
-        currencyFormatter.usesGroupingSeparator = true
-        currencyFormatter.numberStyle = .currency
-        currencyFormatter.locale = Locale(identifier: "en_US")
+        guard let currencyPrice = currencyData.price, let coinPrice = Double(currencyPrice) else {return}
+        guard let lowestPrice = Double(currencyData.sparkline?.min() ?? "0.00") else {return}
+        guard let highestPrice = Double(currencyData.sparkline?.max() ?? "0.00") else {return}
         
-        guard let currencyPrice = currencyData?.price, let price1 = Double(currencyPrice) else {return}
-        let lowestPrice = Double(currencyData?.sparkline?.min() ?? "0.00")
-        let highestPrice = Double(currencyData?.sparkline?.max() ?? "0.00")
-        
-        switch price1 {
-        case 10.0...:
-            currencyFormatter.maximumFractionDigits = 2
-            currencyFormatter.minimumFractionDigits = 2
-        case 1.0...10.0:
-            currencyFormatter.maximumFractionDigits = 4
-            currencyFormatter.minimumFractionDigits = 5
-        case 0.01...1.0:
-            currencyFormatter.maximumFractionDigits = 6
-        case 0.00001...0.01:
-            currencyFormatter.maximumFractionDigits = 7
-        default:
-            print("\(currencyData?.name ?? "error")")
+        price.text = viewModel.priceFormatter(price: coinPrice, max10To1000: 2, min10To1000: 2, max1To10: 4, min1To10: 5, max001To1: 6, max000001To001: 7)
+        lowPrice.text = viewModel.priceFormatter(price: lowestPrice, max10To1000: 2, min10To1000: 2, max1To10: 4, min1To10: 5, max001To1: 6, max000001To001: 7)
+        highPrice.text = viewModel.priceFormatter(price: highestPrice, max10To1000: 2, min10To1000: 2, max1To10: 4, min1To10: 5, max001To1: 6, max000001To001: 7)
+        viewModel.changeColor(model: currencyData, change: change)
         }
-        
-        price.text = currencyFormatter.string(from: NSNumber(value: price1))
-        lowPrice.text = currencyFormatter.string(from: NSNumber(value: lowestPrice!))
-        highPrice.text = currencyFormatter.string(from: NSNumber(value: highestPrice!))
-        
-        
-        if Double(currencyData?.change! ?? "0")! < 0 {
-            change.textColor = .systemRed
-            change.text = (currencyData?.change ?? "0") + "%"
-        } else {
-            change.textColor = .systemGreen
-            change.text = "+" + (currencyData?.change ?? "0") + "%"
-        }
-    }
-
 }
 
 //MARK: - CHART
@@ -93,7 +61,6 @@ extension DetailViewController: ChartViewDelegate {
     }
     
     func setData() {
-        
         guard let sparklineArr = currencyData?.sparkline else {return}
         let arrayY = sparklineArr.map({Double($0)!})
 
@@ -129,16 +96,13 @@ extension DetailViewController: ChartViewDelegate {
         yAxis.labelTextColor = .black
         yAxis.axisLineColor  = .black
         yAxis.labelPosition = .outsideChart
-        
+//      x axis
         lineChart.xAxis.labelPosition = .bottom
         lineChart.xAxis.labelFont = .boldSystemFont(ofSize: 12)
         lineChart.xAxis.setLabelCount(6, force: false)
-        
+//      animation
         lineChart.animate(xAxisDuration: 2.5)
         
         myView.addSubview(lineChart)
     }
-
-    
-    
 }
