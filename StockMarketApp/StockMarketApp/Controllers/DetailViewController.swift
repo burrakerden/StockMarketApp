@@ -72,7 +72,6 @@ extension DetailViewController: ChartViewDelegate {
         let set = LineChartDataSet(entries: entries, label: "Past prices")
         set.colors = ChartColorTemplates.liberty()
         set.drawCirclesEnabled = false
-//        set.valueFont = .boldSystemFont(ofSize: 8)
         set.drawValuesEnabled = false
         set.mode = .cubicBezier
         set.lineWidth = 2
